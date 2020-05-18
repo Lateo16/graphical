@@ -7,7 +7,7 @@ import HomePage from "./screens/HomePage";
 import PlotPage from "./screens/PlotPage";
 
 export default new Router({
-    mode: history,
+    mode: 'history',
     routes: [
         {
             path: '/',
