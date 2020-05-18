@@ -14,26 +14,39 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><router-link :to="plot">Plot</router-link></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Github</a>
-          </li>
-        </ul>
+        <div class="nav navbar-nav ml-auto">
+          <router-link 
+          :to="{name: 'homepage'}" 
+          class="nav-item nav-link"
+          active-class="active"
+          exact>
+          Home
+          </router-link>
+          <router-link 
+          :to="{name: 'plotpage'}" 
+          class="nav-item nav-link"
+          active-class="active"
+          exact>
+          Plot
+          </router-link>
+          <router-link 
+          :to="{name: 'homepage'}" 
+          class="nav-item nav-link"
+          active-class="active"
+          exact>
+          Contact
+          </router-link>
+          <router-link 
+          :to="{name: 'homepage'}" 
+          class="nav-item nav-link"
+          active-class="active"
+          exact>
+          Github
+          </router-link>
+        </div>
       </div>
     </nav>
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 
@@ -46,7 +59,7 @@ export default {
 
 <style scoped>
     .navbar-brand {
-        margin-left: 80px;
+        margin-left: 130px;
         color: white !important;
     }
 
@@ -54,5 +67,6 @@ export default {
         /* margin-left: 650px; */
         color: white !important;
     }
+    
 </style>>
 
